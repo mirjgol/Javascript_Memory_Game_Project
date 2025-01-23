@@ -1,0 +1,78 @@
+/* Small Reset */
+*::before, *::after, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --card-size: 130px;
+}
+
+body{
+  background-color: black;
+  display:grid;
+  height: 100vh; 
+  place-items: center;
+}
+
+h1{
+  color:yellow;
+}
+
+.cards{
+  width:var(--card-size);
+  aspect-ratio: 1/1;
+  position:relative;
+  perspective: 500px;
+  transform-style:preserve-3d;
+  cursor:pointer;
+}
+
+.cards img{
+  width:var(--card-size);
+  height: var(--card-size) ;
+  object-fit: cover;
+  position:absolute; 
+  transition: 0.4s;
+  backface-visibility: hidden;
+  border: 1px solid pink;
+  border-radius: 5px;
+
+
+}
+
+.grid-container-cards{
+  display:grid;
+  grid-template-columns: repeat(4, var(--card-size));
+  gap: 20px;
+}
+
+.front{
+  transform: rotateY(180deg);
+
+}
+
+
+.back, .card.flipped .front{
+  transform:rotateY(0deg);  
+}
+
+.card.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+/* ***when congrats screen is not hidden: this css will be applied: */
+
+.congrats-screen:not([hidden]) {
+  position:fixed;
+  inset:0;
+  z-index:10;
+  background: rgb(17, 17, 37);
+  color:yellow;
+  display:grid;
+  justify-items: center;
+  align-content: center;
+  gap:20px;
+
+}

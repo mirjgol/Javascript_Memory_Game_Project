@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 4096 4096">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #063;
+        stroke-width: 18px;
+      }
+
+      .cls-3 {
+        fill: #be1622;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="Layer_1">
+      <path class="cls-1" d="M889.67,2817.44"/>
+      <path class="cls-3" d="M2048,2613.22S496.61,556.5,496.61,1987.93s1551.39,1751.83,1551.39,1751.83c0,0,1551.39-320.39,1551.39-1751.83s-1551.39,625.28-1551.39,625.28Z"/>
+      <path class="cls-1" d="M902.17,2814.37"/>
+      <ellipse class="cls-2" cx="2048" cy="2428.6" rx="58.33" ry="181.94"/>
+      <ellipse class="cls-2" cx="2375.78" cy="1673" rx="181.94" ry="58.33" transform="translate(-512.4 1991.86) rotate(-41.45)"/>
+      <ellipse class="cls-2" cx="2168.67" cy="1864.67" rx="181.94" ry="58.33" transform="translate(-663.96 2260.07) rotate(-48.64)"/>
+      <ellipse class="cls-2" cx="2057.93" cy="2127.35" rx="58.33" ry="181.94"/>
+      <ellipse class="cls-2" cx="2794.93" cy="1256.55" rx="181.94" ry="58.33" transform="translate(-131.71 2165.02) rotate(-41.45)"/>
+      <ellipse class="cls-2" cx="2585.34" cy="1451.79" rx="181.94" ry="58.33" transform="translate(-212.76 2432.76) rotate(-48.64)"/>
+    </g>
+  </g>
+</svg>

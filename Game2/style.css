@@ -1,0 +1,246 @@
+/* Small Reset */
+*::before, *::after, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  display:flex;
+  background-color: black;
+  flex-direction: column;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+.title{
+  color:rgb(247, 247, 55);
+  display:flex;
+  justify-content:center;
+  padding:1.5rem;
+  font-family: "Kosugi Maru", sans-serif;
+  position:fixed;
+  top:0%;
+  left:43%;
+
+   
+}
+
+.score-fails-container{
+  color:rgb(247, 247, 55);
+  display:flex;
+  justify-content:space-around;
+  padding:1.5rem;
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 1.6rem;
+  position:fixed;
+  top:90%;
+  right: 5%;
+  gap: 70rem;
+
+}
+
+
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+flex-wrap: wrap;
+  perspective: 1000px;
+  position:fixed;
+  left: 30%;
+  top:10%;
+
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.memory-card:active {
+transform: scale(0.93);
+transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+
+.front-face,
+.back-face{  
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  position: absolute;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+}
+
+.front-face{
+  transform: rotateY(180deg);
+  
+  background-color: white;
+
+}
+
+.back-face{
+   background: purple; 
+}
+
+.loose-container{
+  background: white;
+  display: none;
+  z-index: 1;
+  position:fixed;
+  top:10%;
+  left: 25%;
+  height: 40rem;
+  width: 50rem;
+  border-radius: 1rem;
+}
+
+.loose-container.visible{
+
+  display: block;
+ 
+ 
+}
+
+.loose-box{
+  display:flex;
+  flex-direction: column;
+  font-size: 2.7rem;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 5rem;
+  font-size:1.6rem;
+}
+.win-container{
+  background: white;
+  display: none;
+  z-index: 1;
+  position:fixed;
+  top:10%;
+  left: 25%;
+  height: 40rem;
+  width: 50rem;
+  border-radius: 1rem;
+}
+
+.win-container.visible{
+  display:block;
+}
+
+
+
+.win-box{
+  display:flex;
+  flex-direction: column;
+  font-size: 2.7rem;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 5rem;
+  font-size:1.6rem;
+}
+
+.rules-container{ 
+  background: white;
+  display: none;
+  z-index: 5;
+  position:fixed;
+  top:10%;
+  left: 25%;
+  height: 40rem;
+  width: 50rem;
+  border-radius: 1rem;}
+
+  .rules-container.visible{
+    display:block;
+
+  }
+
+  .rules-box{
+    display:flex;
+    flex-direction: column;
+    font-size: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 5rem;
+    font-size:1.6rem;
+
+  }
+
+
+.button{
+  font-size: 1.6rem;
+  padding:1rem;
+  margin: 4rem;
+  background-color:rgb(247, 247, 55);
+  border:none;
+  border-radius: 1rem;
+  border: 1px black solid;
+
+}
+
+.button:hover{
+ background-color:purple;
+
+}
+
+.close-button{
+  font-size: 1.6rem;
+  padding:1rem;
+  margin: 4rem;
+  background-color:rgb(247, 247, 55);
+  border:none;
+  border-radius: 1rem;
+  border: 1px black solid;
+
+}
+
+.close-button:hover{
+  background-color:purple;
+  
+}
+
+.timer{
+  display:block;
+  position:fixed;
+  color: yellow;
+  padding: 3rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  margin:1rem;
+  border: solid 1px yellow;
+}
+
+
+.score-loose{
+  color:red;
+}
+
+.rules-button{ 
+  font-family: "Kosugi Maru", sans-serif;
+  display:block;
+  position:fixed;
+  color: yellow;
+  padding: 3rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  margin:1rem;
+  border: solid 1px yellow;
+  background:none;
+top: 20%;}
+
+.rules-button:hover{
+  background-color: purple;
+}

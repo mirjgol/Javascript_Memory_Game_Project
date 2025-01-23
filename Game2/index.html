@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RYUKS MEMORY GAME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Sixtyfour+Convergence&family=Yuji+Mai&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<style>
+  /* Small Reset */
+  *::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  main{
+    min-height: 100vh;
+    background: black;
+    position: relative;
+  }
+.square{
+position:absolute;
+}
+
+</style>
+<body>
+  <main class="field"></main>
+
+  <h1 class="title">MEMORY GAME</h1>
+
+  <div class="timer">Time: 0s</div>
+  <button class="rules-button">How to play?</button> 
+  
+
+  <div class="memory-game">
+
+    <div class="memory-card" data-background="blue-dots">
+    <img class="front-face" src="../assets/CatOne.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="blue-dots">
+    <img class="front-face" src="../assets/CatOne.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="golden-dots">
+    <img class="front-face" src="../assets/CatTwo.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="golden-dots">
+    <img class="front-face" src="../assets/CatTwo.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="multicolor-dots">
+    <img class="front-face" src="../assets/CatSeven.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="multicolor-dots">
+    <img class="front-face" src="../assets/CatSeven.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="rainbow-clouds">
+    <img class="front-face" src="../assets/CatFour.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="rainbow-clouds">
+    <img class="front-face" src="../assets/CatFour.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="clover">
+    <img class="front-face" src="../assets/CatFive.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="clover">
+    <img class="front-face" src="../assets/CatFive.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="bee">
+    <img class="front-face" src="../assets/CatSix.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="bee">
+    <img class="front-face" src="../assets/CatSix.jpg">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="heart">
+    <img class="front-face" src="../assets/HeartMemoryGame.png">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="heart">
+    <img class="front-face" src="../assets/HeartMemoryGame.png">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="heart">
+    <img class="front-face" src="../assets/HeartMemoryGame.png">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+    <div class="memory-card" data-background="heart">
+    <img class="front-face" src="../assets/HeartMemoryGame.png">
+    <img class="back-face" src="../assets/memory-back.svg">
+  </div>
+
+  </div class="typewriter-cats">Only find the cats...</div>
+  </div class="typewriter-hearts">Avoid the hearts, or apples?</div>
+
+
+
+  <div class="loose-container">
+    <div class="loose-box">
+      <div class="loose-text">You loose the Game. You had <span class="score-loose"></span> fails :/<br><br>
+      Your Time: <span class="score-time-loose"></span>  </div> 
+      <button class="retry button">Try Again!</button>
+    </div>
+  </div>
+
+
+  <div class="win-container">
+    <div class="win-box">
+      <div class="win-text">Congratulations you won the game, you found all 6 pairs in <span class="score-time-win"></span>  !
+      </div> 
+      <button class="again  button">Play Again!</button>
+    </div>
+  </div>
+
+  <div class="rules-container">
+    <div class="rules-box">
+      <div class="rules-text">Rule 1: Find all six pairs of cat cards to win the game.<br><br> Rule 2: Try to avoid the hearts, if you click 5 hearts you loose! <br><br> Good Luck!
+      </div> 
+      <button class="close-button">Close</button>
+    </div>
+  </div>
+
+  <div class="score-fails-container">
+    <div class="score">Cat Pairs: <span class="scored-number"></span> </div>
+    <div class="fails">Hearts: <span class="fails-number"></span></div>
+    
+  </div>
+ 
+  
+</body>
+</html>
