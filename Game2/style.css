@@ -17,11 +17,12 @@ body{
   color:rgb(247, 247, 55);
   display:flex;
   justify-content:center;
-  padding:1.5rem;
+  padding:1.3rem;
   font-family: "Kosugi Maru", sans-serif;
   position:fixed;
   top:0%;
   left:43%;
+  background-color: black;
 
    
 }
@@ -35,8 +36,10 @@ body{
   font-size: 1.6rem;
   position:fixed;
   top:90%;
-  right: 5%;
+  right: 9%;
   gap: 70rem;
+  background-color: black;
+  
 
 }
 
@@ -174,9 +177,14 @@ transition: transform .2s;
     font-size: 2.7rem;
     align-items: center;
     justify-content: center;
-    margin: 10rem 5rem;
+    margin: 4rem;
     font-size:1.6rem;
 
+  }
+
+  .rules-title{
+    color:red;
+   margin-bottom: 2rem;
   }
 
 
@@ -199,7 +207,7 @@ transition: transform .2s;
 .close-button{
   font-size: 1.6rem;
   padding:1rem;
-  margin: 4rem;
+  margin: 3rem;
   background-color:rgb(247, 247, 55);
   border:none;
   border-radius: 1rem;
@@ -221,6 +229,7 @@ transition: transform .2s;
   border-radius: 1rem;
   margin:1rem;
   border: solid 1px yellow;
+  background-color: black;
 }
 
 
@@ -238,9 +247,42 @@ transition: transform .2s;
   border-radius: 1rem;
   margin:1rem;
   border: solid 1px yellow;
-  background:none;
+  background-color: black;
 top: 20%;}
 
 .rules-button:hover{
   background-color: purple;
+}
+
+button.joker-container{
+  font-family: "Kosugi Maru", sans-serif;
+z-index:5;
+position: absolute;
+top:43%;  
+margin:1rem;
+border: solid 1px yellow;
+padding: 1rem;
+border-radius: 1rem;
+font-size: 2rem;
+color:red;
+display:flex;
+flex-direction: column;
+align-items: center;
+background-color: black;
+position:fixed;
+}
+
+.joker-container:hover{
+  background-color: rgb(65, 10, 65);
+}
+
+.joker-text{
+  color:yellow;
+  font-size: 1.6rem;
+}
+
+/* joker verstecken */
+
+.hidden{
+  visibility:hidden;
 }

@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Sixtyfour+Convergence&family=Yuji+Mai&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -128,11 +129,13 @@ position:absolute;
 
   <div class="rules-container">
     <div class="rules-box">
-      <div class="rules-text">Rule 1: Find all six pairs of cat cards to win the game.<br><br> Rule 2: Try to avoid the hearts, if you click 5 hearts you loose! <br><br> Good Luck!
+      <div class="rules-text"><h2 class="rules-title">Rules</h2>Rule 1: Find all six pairs of cat cards to win the game.<br><br> Rule 2: Try to avoid the hearts, if you click 5 hearts you loose! <br><br> Rule 3: You have one Joker, when you use it, it shows all cards for 3 seconds. <br><br> Rule 4: When time reaches 120s you loose the game. <br><br> Good Luck!
       </div> 
       <button class="close-button">Close</button>
     </div>
   </div>
+
+  <button class="joker-container"><span class="joker-text">JOKER</span><i class="fa-solid fa-heart"></i></button>
 
   <div class="score-fails-container">
     <div class="score">Cat Pairs: <span class="scored-number"></span> </div>
