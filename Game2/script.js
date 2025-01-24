@@ -238,6 +238,9 @@ function restartGame(){
 
 function disableCards() {
 
+  firstCard.classList.add("matched");
+  secondCard.classList.add("matched");
+
   firstCard.removeEventListener("click",flipCard);
   secondCard.removeEventListener("click", flipCard);
 
@@ -268,12 +271,12 @@ function resetBoard() {
 
 // shuffle the cards:
 
-(function shuffle(){
+function shuffle(){
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 16);
     card.style.order = randomPos;
   });
-}) ();
+};
 
 
 // add event listener to restart button:
@@ -297,14 +300,28 @@ closeRules.addEventListener("click", (event) => {
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
+// Karten mischen bei start
+shuffle();
+
 
 // add EventListener to joker and flip all cards click event: 
 
 buttonJoker.addEventListener("click", () => {
     buttonJoker.classList.add("hidden");
-  cards.forEach(card => card.classList.add("flip"));
+
+    //nicht gematchte karten flippen
+cards.forEach((card) =>{
+  if (!card.classList.contains("matched")){
+    card.classList.add("flip");
+  }
+});
+
   setTimeout(() =>{
-    cards.forEach(card => card.classList.remove("flip"));
+    cards.forEach((card) => {
+      if (!card.classList.contains("matched")){
+        card.classList.remove("flip");
+      }
+    });
   }, 2000); // nach 2 sekunden jocker flip cards vorbei
 
 });
@@ -356,6 +373,68 @@ for ( let i = 0; i<120; i++) {
   squares[i].show();
 
 }
+
+
+// background hearts :
+
+let hearts = []; /// array für alle stars being created
+
+
+function setup (){ // sets up the canvas 
+createCanvas(window.innerWidth,window.innerHeight);
+
+
+for (let i = 0; i<100; i++){
+  hearts.push(new Heart());
+}
+}
+
+function draw() {
+background(10);
+ 
+  for (let i = 0; i < hearts.length; i++){
+    hearts[i].display();
+    hearts[i].update();
+}
+}
+
+
+function Heart () {
+  this.x = random(0, window.innerWidth);
+  this.y= random(0, window.innerHeight);
+  this.speed = random(1,5);
+ 
+
+  this.display = function () {
+    noStroke();
+    fill(255);
+    circle(this.x,this.y,10);
+  };
+
+  this.update = function() {
+    if(this.y > height){
+      this.y = 0;
+    }
+
+    this.updatedSpeed = map(mouseX, 0, innerWidth, 1, this.speed);
+    this.y = this.y + this.speed;
+  };
+}
+
+
+// mouse x links :
+
+
+colorMode(RGB, 100);
+
+for (let x = 0; x < 100; x += 1) {
+  for (let y = 0; y < 100; y += 1) {
+    stroke(x, y, 0);
+    point(x, y);
+  }
+}
+
+
 
 
 

@@ -36,7 +36,7 @@ body{
   font-size: 1.6rem;
   position:fixed;
   top:90%;
-  right: 9%;
+  right: 8%;
   gap: 70rem;
   background-color: black;
   
@@ -273,7 +273,7 @@ position:fixed;
 }
 
 .joker-container:hover{
-  background-color: rgb(65, 10, 65);
+  background-color: purple;
 }
 
 .joker-text{
